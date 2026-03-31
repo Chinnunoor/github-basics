@@ -1,0 +1,25 @@
+
+name: NOOR
+on:
+  push:
+    branches: [main]
+
+
+jobs:
+  malik:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: something is printing
+      - uses: actions/checkout@v6
+      - name: use java env
+      - uses: actions/set-java@v6
+        with:
+          java-version: 17
+
+          run : chmod +x gradlew
+
+          run: ./gradlew malik
+          
+        
+    
